@@ -65,6 +65,7 @@
     /*font-family goes here but the videos font isnt on my laptop */
     font-size: 16px;
 }
+
 .navigation li:hover {
     color: lightgreen;
 }
