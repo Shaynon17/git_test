@@ -1,8 +1,11 @@
+/* CSS CHEAT SHEET: https: //htmlcheatsheet.com/css/?fbclid=IwAR1QBk-E1Gja8kaXJvuyZWUeFhMsYqOYhih9Fxl3e0QW9ZVuvXMcdQqPMCY  */
+
 * {
     margin: 0;
     padding: 0;
     list-style: none;
     text-decoration: none;
+    border-style: border-box;
 }
 
 .header {
@@ -10,6 +13,34 @@
     height: 80px;
     display: block;
     background-color: #101010;
+}
+
+.bio {
+    text-align: center;
+}
+
+.bio h1, h2 {
+    padding: 20px;
+}
+
+.bio p {
+    padding: 20px;
+}
+
+.imgtest {
+    font-size: 17px;
+}
+
+.picofme {
+    text-align: center;
+}
+
+.picofme {
+    height: 375px;
+    width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 .inner_header {
@@ -36,6 +67,7 @@
     font-size: 32px;
     font-weight: 200px;
 }
+
 
 .logo_container h1 span {
     font-weight: 800px;
