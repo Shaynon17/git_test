@@ -9,11 +9,16 @@
 }
 
 .header {
+    position: fixed;
+        z-index: 10;
+        top: 0;
+        left: 0;
     width: 100%;
     height: 80px;
     display: block;
     background-color: #101010;
 }
+
 
 .bio {
     text-align: center;
@@ -100,4 +105,9 @@
 
 .navigation li:hover {
     color: lightgreen;
+}
+
+.main {
+    position: relative;
+    margin-top: 80px;
 }
