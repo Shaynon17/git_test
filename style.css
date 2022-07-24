@@ -134,3 +134,17 @@ a {
     color: black;
     box-shadow: 0px 0px;
 }
+.breadcrumb {
+    color: white;
+}
+
+/* 
+.breadcrumb li {
+    display: inline;
+} 
+
+.breadcrumb li+li::before {
+    content: ">>>";
+}
+
+*/
