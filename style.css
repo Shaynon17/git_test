@@ -112,10 +112,12 @@
     margin-top: 80px;
 }
 
-a {
+/* a {
     color: blue;
     text-decoration: underline;
 }
+
+*/
 
 .button {
     padding: 5px;
@@ -148,3 +150,9 @@ a {
 }
 
 */
+.favDishes, img {
+    height: 375px;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
