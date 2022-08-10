@@ -156,3 +156,13 @@
     margin-left: auto;
     margin-right: auto;
 }
+.favDishes {
+    display: inline-flex;
+    width: 1300px;
+    flex-wrap: wrap;
+}
+
+.favDishes ul li {
+    display: inline-flex;
+    
+}
