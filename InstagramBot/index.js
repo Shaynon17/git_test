@@ -1,5 +1,6 @@
 //import the robotjs library
-//i need to make sure im in the instagrambot directory then run node indes.js for this to run
+//i need to make sure im in the instagrambot directory then run node indes.js for this to runvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvcddddddddddddddddddddddddd,m m,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,pooooooooooo5eeeeeeeku,,m0-kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk-,,,,,thol//////-p 
+
 let robot = require('robotjs');
 
 function main() {
@@ -30,7 +31,7 @@ function main() {
     //above is to get to the first picture, loop below
 
 let number_of_loops = 0;
-while (number_of_loops < 10) /* change the number here for how many times to loop*/ {
+while (number_of_loops < 5) /* change the number here for how many times to loop*/ {
     robot.moveMouse(1320, 385)
     robot.mouseClick();
     sleep(2000)
