@@ -14,7 +14,7 @@ function main() {
     sleep(2000);
     robot.mouseClick();
     sleep(3000);
-    robot.typeString('balloon animals');
+    robot.typeString('balloon animals'); /* this is where the hashtag or SEO keyword goes */
     sleep(2000);
     robot.moveMouse(637, 175);
     robot.mouseClick();
@@ -29,7 +29,7 @@ function main() {
     //above is to get to the first picture, loop below
 
 let number_of_loops = 0;
-while (number_of_loops < 10) {
+while (number_of_loops < 10) /* change the number here for how many times to loop*/ {
     robot.moveMouse(1320, 385)
     robot.mouseClick();
     sleep(2000)
