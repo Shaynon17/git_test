@@ -1,4 +1,5 @@
 //import the robotjs library
+//i need to make sure im in the instagrambot directory then run node indes.js for this to run
 let robot = require('robotjs');
 
 function main() {
