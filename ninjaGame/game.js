@@ -4,6 +4,8 @@
 //     create: create,
 //     update: update
 // })
+
+// /c/wamp64/www then git push
 var config = {
     type: Phaser.AUTO,
     width: 800,
