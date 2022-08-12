@@ -1,6 +1,6 @@
 //import the robotjs library
 //i need to make sure im in the instagrambot directory then run node indes.js for this to runvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvcddddddddddddddddddddddddd,m m,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,pooooooooooo5eeeeeeeku,,m0-kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk-,,,,,thol//////-p
-// need to be in this directiroy in the terminal C:\wamp64\www\InstagramBot> then enter node index.js
+// need to be in this directiroy in the terminal /c/wamp64/www then enter node index.js
 
 let robot = require('robotjs');
 
