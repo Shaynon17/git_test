@@ -1,5 +1,6 @@
 //import the robotjs library
-//i need to make sure im in the instagrambot directory then run node indes.js for this to runvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvcddddddddddddddddddddddddd,m m,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,pooooooooooo5eeeeeeeku,,m0-kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk-,,,,,thol//////-p 
+//i need to make sure im in the instagrambot directory then run node indes.js for this to runvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvcddddddddddddddddddddddddd,m m,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,pooooooooooo5eeeeeeeku,,m0-kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk-,,,,,thol//////-p
+// need to be in this directiroy in the terminal C:\wamp64\www\InstagramBot> then enter node index.js
 
 let robot = require('robotjs');
 
@@ -16,33 +17,61 @@ function main() {
     sleep(2000);
     robot.mouseClick();
     sleep(3000);
-    robot.typeString('balloon animals'); /* this is where the hashtag or SEO keyword goes */
+    robot.typeString('#witchesofinstagram'); /* this is where the hashtag or SEO keyword goes */
     sleep(2000);
     robot.moveMouse(637, 175);
     robot.mouseClick();
     sleep(4000)
-    robot.moveMouse(350, 300);
+    robot.moveMouse(1355, 718)
     robot.mouseClick();
+    robot.mouseClick();
+    robot.mouseClick();
+    robot.mouseClick();
+    robot.mouseClick();
+    robot.mouseClick();
+    robot.mouseClick();
+    robot.mouseClick();
+    robot.mouseClick();
+    robot.mouseClick();
+    robot.mouseClick();
+    robot.mouseClick();
+    robot.mouseClick();
+    robot.mouseClick();
+    robot.mouseClick();
+    sleep(2000);
+    robot.moveMouse(350, 300);
     sleep(2000)
-    // robot.mouseClick([left], [true])
-    robot.mouseClick()
-    robot.mouseClick()
-    sleep(2000)
+    robot.mouseClick();
+    sleep(2000) //this line should get to the first picture
+    robot.mouseClick();
+    robot.mouseClick();
+    sleep(2000) //this line will get to teh first picture and like it
+    // robot.keyTap('right')
+
+
+    //done need the below code
+    // sleep(2000)
+    // robot.mouseClick()
+    // sleep(2000)
+    // robot.keyTap('right')
+    // robot.mouseClick()
+    // robot.mouseClick()
+    // sleep(2000)
     //above is to get to the first picture, loop below
 
-let number_of_loops = 0;
-while (number_of_loops < 5) /* change the number here for how many times to loop*/ {
-    robot.moveMouse(1320, 385)
-    robot.mouseClick();
-    sleep(2000)
-    robot.moveMouse(300, 350)
-    sleep(2000)
-    robot.mouseClick();
-    robot.mouseClick();
-    sleep(2000)
-    number_of_loops = number_of_loops + 1
-}
-    console.log('done');
+// let number_of_loops = 0;
+// while (number_of_loops < 5) /* change the number here for how many times to loop*/ {
+    robot.keyTap('right')
+    //     robot.mouseClick();
+//     sleep(2000)
+//     robot.moveMouse(300, 350)
+//     sleep(2000)
+//     robot.mouseClick();
+//     robot.mouseClick();
+//     sleep(2000)
+//     number_of_loops = number_of_loops + 1
+// }
+//     console.log('done');
 }
 
 
