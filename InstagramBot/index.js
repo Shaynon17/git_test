@@ -46,31 +46,16 @@ function main() {
     robot.mouseClick();
     robot.mouseClick();
     sleep(2000) //this line will get to teh first picture and like it
-    // robot.keyTap('right')
 
-
-    //done need the below code
-    // sleep(2000)
-    // robot.mouseClick()
-    // sleep(2000)
-    // robot.keyTap('right')
-    // robot.mouseClick()
-    // robot.mouseClick()
-    // sleep(2000)
-    //above is to get to the first picture, loop below
-
-// let number_of_loops = 0;
-// while (number_of_loops < 5) /* change the number here for how many times to loop*/ {
+    let number_of_loops = 0;
+    while (number_of_loops < 5) /* change the number here for how many times to loop*/ {
     robot.keyTap('right')
-    //     robot.mouseClick();
-//     sleep(2000)
-//     robot.moveMouse(300, 350)
-//     sleep(2000)
-//     robot.mouseClick();
-//     robot.mouseClick();
-//     sleep(2000)
-//     number_of_loops = number_of_loops + 1
-// }
+    sleep(2000)
+    robot.mouseClick();
+    robot.mouseClick();
+    sleep(2000)
+    number_of_loops = number_of_loops + 1
+}
 //     console.log('done');
 }
 
