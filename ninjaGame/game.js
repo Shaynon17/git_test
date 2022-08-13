@@ -29,6 +29,8 @@ var game = new Phaser.Game(config);
 function preload() {
     this.load.image('sky', 'assets/newSky.png')
     this.load.image('ground', 'assets/platform.png')
+    this.load.image('myground', 'assets/myplatform.png')
+
     this.load.image('dude', 'assets/ninja.png')
     // this.load.image('myGround', 'assets/myplatform.png')
 }
@@ -39,7 +41,7 @@ function create() {
     platforms = this.physics.add.staticGroup();
 
     platforms.create(400, 568, 'ground').setScale(2).refreshBody();
-    // platforms.create(300, 300, 'myGround');
+    platforms.create(300, 300, 'myground'); //this is my added ground 
     platforms.create(400, 450, 'ground');
     platforms.create(100, 250, 'ground');
     platforms.create(750, 220, 'ground');
