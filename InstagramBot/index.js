@@ -48,7 +48,7 @@ function main() {
     sleep(2000) //this line will get to teh first picture and like it
 
     let number_of_loops = 0;
-    while (number_of_loops < 50) /* change the number here for how many times to loop*/ {
+    while (number_of_loops < 40) /* change the number here for how many times to loop*/ {
     robot.keyTap('right')
     sleep(2000)
     robot.mouseClick();

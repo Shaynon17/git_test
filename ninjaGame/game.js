@@ -36,7 +36,6 @@ function preload() {
 function create() {
     // game.physics.startSystem(Phaser.Physics.ARCADE) //this line of code breaks the game
     this.add.image(400, 300, 'sky')
-
     platforms = this.physics.add.staticGroup();
 
     platforms.create(400, 568, 'ground').setScale(2).refreshBody();
