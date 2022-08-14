@@ -23,21 +23,11 @@ function main() {
     robot.mouseClick();
     sleep(4000)
     robot.moveMouse(1355, 718)
-    robot.mouseClick();
-    robot.mouseClick();
-    robot.mouseClick();
-    robot.mouseClick();
-    robot.mouseClick();
-    robot.mouseClick();
-    robot.mouseClick();
-    robot.mouseClick();
-    robot.mouseClick();
-    robot.mouseClick();
-    robot.mouseClick();
-    robot.mouseClick();
-    robot.mouseClick();
-    robot.mouseClick();
-    robot.mouseClick();
+    let count = 0
+    while (count < 15 ) {
+        robot.mouseClick();
+        count++
+    }
     sleep(2000);
     robot.moveMouse(350, 300);
     sleep(2000)
@@ -48,7 +38,7 @@ function main() {
     sleep(2000) //this line will get to teh first picture and like it
 
     let number_of_loops = 0;
-    while (number_of_loops < 40) /* change the number here for how many times to loop*/ {
+    while (number_of_loops < 10) /* change the number here for how many times to loop*/ {
     robot.keyTap('right')
     sleep(2000)
     robot.mouseClick();
@@ -56,7 +46,7 @@ function main() {
     sleep(2000)
     number_of_loops = number_of_loops + 1
 }
-//     console.log('done');
+    console.log('done');
 }
 
 
