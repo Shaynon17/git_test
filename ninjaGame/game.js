@@ -24,6 +24,10 @@ var config = {
     }
 };
 
+var player;
+var platforms;
+var cursors;
+
 var game = new Phaser.Game(config);
 
 function preload() {
@@ -31,48 +35,53 @@ function preload() {
     this.load.image('ground', 'assets/platform.png')
     this.load.image('myground', 'assets/myplatform.png')
 
-    this.load.image('dude', 'assets/ninja.png')
+    this.load.spritesheet('dude', 'assets/dude.png', { frameWidth: 32, frameHeight: 48 })
     // this.load.image('myGround', 'assets/myplatform.png')
 }
 
 function create() {
     // game.physics.startSystem(Phaser.Physics.ARCADE) //this line of code breaks the game
-    this.add.image(400, 300, 'sky')
+   this.add.image(400, 300, 'sky')
     platforms = this.physics.add.staticGroup();
 
+
     platforms.create(400, 568, 'ground').setScale(2).refreshBody();
-    platforms.create(300, 300, 'myground'); //this is my added ground 
-    platforms.create(400, 450, 'ground');
-    platforms.create(100, 250, 'ground');
-    platforms.create(750, 220, 'ground');
+    platforms.create(400, 450, 'myground'); //middle bottom platform
+    // platforms.create(400, 450, 'ground');
+    platforms.create(175, 300, 'myground'); //middle left platform
+    platforms.create(650, 300, 'myground'); // middle right platform
+    platforms.create(400, 150, 'myground'); // middle right platform
 
-    player = this.physics.add.sprite(100, 450, 'dude');
 
-    player.setBounce(0.2);
+    player = this.physics.add.sprite(400, 300, 'dude');
+
+    player.setBounce(0.2); // how much bounce the character had
     player.setCollideWorldBounds(true);
 
     this.anims.create({
         key: 'left',
         frames: this.anims.generateFrameNumbers('dude', { start: 0, end: 3 }),
-        frameRate: 100,
+        frameRate: 10,
         repeat: -1
     });
 
     this.anims.create({
         key: 'turn',
         frames: [{ key: 'dude', frame: 4 }],
-        frameRate: 200
+        frameRate: 20
     });
 
     this.anims.create({
         key: 'right',
         frames: this.anims.generateFrameNumbers('dude', { start: 5, end: 8 }),
-        frameRate: 100,
+        frameRate: 10,
         repeat: -1
     });
 
+
     this.physics.add.collider(player, platforms);
 
+    cursors = this.input.keyboard.createCursorKeys();
 
     
 
@@ -81,6 +90,7 @@ function create() {
 
 function update() { 
     cursors = this.input.keyboard.createCursorKeys();
+
 
     if (cursors.left.isDown) {
         player.setVelocityX(-160);
