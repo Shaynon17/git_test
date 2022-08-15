@@ -37,10 +37,12 @@ function main() {
     robot.mouseClick();
     sleep(2000) //this line will get to teh first picture and like it
 
+
+
     let number_of_loops = 0;
-    while (number_of_loops < 10) /* change the number here for how many times to loop*/ {
+    while (number_of_loops < randomNumOfLikes(40, 50)) /* change the numbers here for how many times to loop*/ {
     robot.keyTap('right')
-    sleep(2000)
+    sleep(randomSleepTime(2000, 8000)) //The bot will be on each picture for a random amount of time to be less detectable
     robot.mouseClick();
     robot.mouseClick();
     sleep(2000)
@@ -49,9 +51,18 @@ function main() {
     console.log('done');
 }
 
+//This will generate a random number so the bot likes a random amount of pictures each time to avoid patterns
+function randomNumOfLikes (min, max) {
+    return Math.floor(Math.random() * (max - min) + min);
+}
 
 function sleep(ms) {
     Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, ms)
 }
+
+// This will generate a random amount of time for the mouse to sleep 
+function randomSleepTime(min, max) {
+    return Math.floor(Math.random() * (max - min) + min)
+} 
 
 main();
