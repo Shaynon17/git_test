@@ -25,8 +25,13 @@ var config = {
 };
 
 var player;
+var stars;
+var bombs;
 var platforms;
 var cursors;
+var score = 0;
+var gameOver = false;
+var scoreText;
 
 var game = new Phaser.Game(config);
 
@@ -34,7 +39,8 @@ function preload() {
     this.load.image('sky', 'assets/newSky.png')
     this.load.image('ground', 'assets/platform.png')
     this.load.image('myground', 'assets/myplatform.png')
-
+    this.load.image('star', 'assets/star.png');
+    this.load.image('bomb', 'assets/bomb.png');
     this.load.spritesheet('dude', 'assets/dude.png', { frameWidth: 32, frameHeight: 48 })
     // this.load.image('myGround', 'assets/myplatform.png')
 }
@@ -49,7 +55,7 @@ function create() {
     platforms.create(400, 450, 'myground'); //middle bottom platform
     // platforms.create(400, 450, 'ground');
     platforms.create(175, 300, 'myground'); //middle left platform
-    platforms.create(650, 300, 'myground'); // middle right platform
+    platforms.create(625, 300, 'myground'); // middle right platform
     platforms.create(400, 150, 'myground'); // middle right platform
 
 
@@ -79,18 +85,51 @@ function create() {
     });
 
 
-    this.physics.add.collider(player, platforms);
 
     cursors = this.input.keyboard.createCursorKeys();
 
-    
+    stars = this.physics.add.group({
+        key: 'star',
+        repeat: 11,
+        setXY: { x: 12, y: 0, stepX: 70 }
+    });
 
+    stars.children.iterate(function (child) {
+
+        child.setBounceY(Phaser.Math.FloatBetween(0.4, 0.8));
+
+    });
+
+    bombs = this.physics.add.group();
+
+    this.physics.add.collider(player, platforms);
+    this.physics.add.collider(stars, platforms);
+    this.physics.add.collider(bombs, platforms);
+    this.physics.add.overlap(player, stars, collectStar, null, this);
+    this.physics.add.collider(player, bombs, hitBomb, null, this);
+
+    scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
+//     fizzTest = this.add.text(40, 40, fizzBuzz(), { fontSize: '32px', fill: '#000' });
+//    function word()  {
+//     return 'test'
+//    }
+//     function fizzBuzz() {
+//         if (scoreText === 3) {
+//             return scoreText.setText('Score: ' + 'fizz')
+//         } else {
+//             return "test"
+//         }
+//     }
 }
 
 
 function update() { 
     cursors = this.input.keyboard.createCursorKeys();
 
+
+    if (gameOver) {
+        return;
+    }
 
     if (cursors.left.isDown) {
         player.setVelocityX(-160);
@@ -112,3 +151,44 @@ function update() {
         player.setVelocityY(-330);
     }
 }
+
+function collectStar(player, star) {
+    star.disableBody(true, true);
+    score += 1;
+    if (score === 3) {
+        scoreText.setText('Score: ' + 'fizz');
+    } else {
+        scoreText.setText('Score: ' + score);
+    }
+    if (stars.countActive(true) === 0) {
+        //  A new batch of stars to collect
+        stars.children.iterate(function (child) {
+
+            child.enableBody(true, child.x, 0, true, true);
+
+        });
+
+        var x = (player.x < 400) ? Phaser.Math.Between(400, 800) : Phaser.Math.Between(0, 400);
+
+        var bomb = bombs.create(x, 16, 'bomb');
+        bomb.setBounce(1);
+        bomb.setCollideWorldBounds(true);
+        bomb.setVelocity(Phaser.Math.Between(-200, 200), 20);
+
+    }
+}
+
+function hitBomb(player, bomb) {
+    this.physics.pause();
+
+    player.setTint(0xff0000);
+
+    player.anims.play('turn');
+
+    gameOver = true;
+}
+
+function isDivisibleBy(score, num) {
+    return (score % num === 0)
+}
+
