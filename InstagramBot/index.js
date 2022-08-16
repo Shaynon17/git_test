@@ -17,7 +17,7 @@ function main() {
     sleep(2000);
     robot.mouseClick();
     sleep(3000);
-    robot.typeString('#witchesofinstagram'); /* this is where the hashtag or SEO keyword goes */
+    robot.typeString('#witchesofinstagram'); /* this is where the hashtag or SEO keyword goes */ // #witchesofinstagram 
     sleep(2000);
     robot.moveMouse(637, 175);
     robot.mouseClick();
@@ -40,7 +40,7 @@ function main() {
 
 
     let number_of_loops = 0;
-    while (number_of_loops < randomNumOfLikes(40, 50)) /* change the numbers here for how many times to loop*/ {
+    while (number_of_loops < randomNumOfLikes(50, 60)) /* change the numbers here for how many times to loop*/ {
     robot.keyTap('right')
     sleep(randomSleepTime(2000, 8000)) //The bot will be on each picture for a random amount of time to be less detectable
     robot.mouseClick();
