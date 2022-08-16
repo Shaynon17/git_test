@@ -137,7 +137,7 @@ function update() {
 function collectStar(player, star) {
     star.disableBody(true, true);
     score += 1;
-
+   
     if (stars.countActive(true) === 0) {
         stars.children.iterate(function (child) {
 
@@ -154,9 +154,9 @@ function collectStar(player, star) {
 
     }
     if (isDivisibleBy(score, 5) && isDivisibleBy(score, 3)) {
-        return scoreText.setText('Score: ' + score + ' fizzbuzz');
+        return scoreText.setText('Score: ' +  score + ' fizzbuzz');
     } else if (isDivisibleBy(score, 3)) {
-        return scoreText.setText('Score: ' + score + ' fizz');
+        return scoreText.setText('Score: ' + score+ ' fizz');
     } else if (isDivisibleBy(score, 5)) {
         return scoreText.setText('Score: ' + score + ' buzz');
     } else {
