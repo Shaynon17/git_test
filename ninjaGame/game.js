@@ -1,5 +1,4 @@
-
-// http://localhost/ninjaGame/ (CAP this to browser to access the game) Make sure WAMP is turned on for this to work
+// http://localhost/ninjaGame/ (CAP this to browser to access the game)
 // /c/wamp64/www then git push
 var config = {
     type: Phaser.AUTO,
@@ -53,7 +52,7 @@ function create() {
 
     player = this.physics.add.sprite(400, 300, 'dude');
 
-    player.setBounce(0.2); // how much bounce the character has
+    player.setBounce(0.2); // how much bounce the character had
     player.setCollideWorldBounds(true);
 
     this.anims.create({
@@ -100,7 +99,7 @@ function create() {
     this.physics.add.overlap(player, stars, collectStar, null, this);
     this.physics.add.collider(player, bombs, hitBomb, null, this);
 
-    scoreText = this.add.text(16, 16, 'Score: 0', { fontSize: '32px', fill: '#000' });
+    scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
 
 }
 
@@ -134,12 +133,10 @@ function update() {
     }
 }
 
-
-
 function collectStar(player, star) {
     star.disableBody(true, true);
     score += 1;
-
+   
     if (stars.countActive(true) === 0) {
         stars.children.iterate(function (child) {
 
@@ -155,17 +152,17 @@ function collectStar(player, star) {
         bomb.setVelocity(Phaser.Math.Between(-200, 200), 20);
 
     }
-
     if (isDivisibleBy(score, 5) && isDivisibleBy(score, 3)) {
-        return scoreText.setText('Score: ' + score + ' fizzbuzz');
+        return scoreText.setText('Score: ' +  score + ' fizzbuzz');
     } else if (isDivisibleBy(score, 3)) {
-        return scoreText.setText('Score: ' + score + ' fizz');
+        return scoreText.setText('Score: ' + score+ ' fizz');
     } else if (isDivisibleBy(score, 5)) {
         return scoreText.setText('Score: ' + score + ' buzz');
     } else {
         return scoreText.setText('Score: ' + score);
     }
 }
+
 
 function hitBomb(player, bomb) {
     this.physics.pause();
