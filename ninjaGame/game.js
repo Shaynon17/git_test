@@ -1,5 +1,6 @@
 // http://localhost/ninjaGame/ (CAP this to browser to access the game)
 // /c/wamp64/www then git push
+//test
 var config = {
     type: Phaser.AUTO,
     width: 800,
