@@ -152,14 +152,12 @@ function update() {
     }
 }
 
+
+
 function collectStar(player, star) {
     star.disableBody(true, true);
     score += 1;
-    if (score === 3) {
-        scoreText.setText('Score: ' + 'fizz');
-    } else {
-        scoreText.setText('Score: ' + score);
-    }
+
     if (stars.countActive(true) === 0) {
         //  A new batch of stars to collect
         stars.children.iterate(function (child) {
@@ -176,6 +174,16 @@ function collectStar(player, star) {
         bomb.setVelocity(Phaser.Math.Between(-200, 200), 20);
 
     }
+
+    if (isDivisibleBy(score, 5) && isDivisibleBy(score, 3)) {
+        return scoreText.setText('Score: ' + 'fizzbuzz');
+    } else if (isDivisibleBy(score, 3)) {
+        return scoreText.setText('Score: ' + 'fizz');
+    } else if (isDivisibleBy(score, 5)) {
+        return scoreText.setText('Score: ' + 'buzz');
+    } else {
+        return scoreText.setText('Score: ' + score);
+    }
 }
 
 function hitBomb(player, bomb) {
@@ -191,4 +199,3 @@ function hitBomb(player, bomb) {
 function isDivisibleBy(score, num) {
     return (score % num === 0)
 }
-
