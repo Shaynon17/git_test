@@ -1,5 +1,4 @@
-
-// http://localhost/ninjaGame/ (CAP this to browser to access the game) Make sure WAMP is turned on for this to work
+// http://localhost/ninjaGame/ (CAP this to browser to access the game)
 // /c/wamp64/www then git push
 var config = {
     type: Phaser.AUTO,
@@ -40,7 +39,7 @@ function preload() {
 }
 
 function create() {
-   this.add.image(400, 300, 'sky')
+    this.add.image(400, 300, 'sky')
     platforms = this.physics.add.staticGroup();
 
 
@@ -53,7 +52,7 @@ function create() {
 
     player = this.physics.add.sprite(400, 300, 'dude');
 
-    player.setBounce(0.2); // how much bounce the character has
+    player.setBounce(0.2); // how much bounce the character had
     player.setCollideWorldBounds(true);
 
     this.anims.create({
@@ -105,7 +104,7 @@ function create() {
 }
 
 
-function update() { 
+function update() {
     cursors = this.input.keyboard.createCursorKeys();
 
 
@@ -134,8 +133,6 @@ function update() {
     }
 }
 
-
-
 function collectStar(player, star) {
     star.disableBody(true, true);
     score += 1;
@@ -155,7 +152,6 @@ function collectStar(player, star) {
         bomb.setVelocity(Phaser.Math.Between(-200, 200), 20);
 
     }
-
     if (isDivisibleBy(score, 5) && isDivisibleBy(score, 3)) {
         return scoreText.setText('Score: ' + score + ' fizzbuzz');
     } else if (isDivisibleBy(score, 3)) {
@@ -166,6 +162,7 @@ function collectStar(player, star) {
         return scoreText.setText('Score: ' + score);
     }
 }
+
 
 function hitBomb(player, bomb) {
     this.physics.pause();
