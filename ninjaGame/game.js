@@ -137,6 +137,7 @@ function update() {
 function collectStar(player, star) {
     star.disableBody(true, true);
     score += 1;
+    
    
     if (stars.countActive(true) === 0) {
         stars.children.iterate(function (child) {

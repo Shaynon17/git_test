@@ -40,7 +40,7 @@ function main() {
 
 
     let number_of_loops = 0;
-    while (number_of_loops < randomNumOfLikes(50, 60)) /* change the numbers here for how many times to loop*/ {
+    while (number_of_loops < randomNumOfLikes(60, 70)) /* change the numbers here for how many times to loop*/ {
     robot.keyTap('right')
     sleep(randomSleepTime(2000, 8000)) //The bot will be on each picture for a random amount of time to be less detectable
     robot.mouseClick();
