@@ -1,6 +1,7 @@
 //import the robotjs library
 //i need to make sure im in the instagrambot directory C:\wamp64\www\InstagramBot> then run node index.js for this to run
 // need to be in this directiroy in the terminal /c/wamp64/www to commit
+//make a follower bot
 
 let robot = require('robotjs');
 
