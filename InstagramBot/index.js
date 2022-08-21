@@ -14,23 +14,23 @@ function main() {
     robot.mouseClick();
     robot.typeString('instagram.com');
     robot.keyTap('enter');
-    robot.moveMouse(637, 100);
+    robot.moveMouseSmooth(637, 100);
     sleep(2000);
     robot.mouseClick();
     sleep(3000);
     robot.typeString('#witchesofinstagram'); /* this is where the hashtag or SEO keyword goes */ // #witchesofinstagram 
     sleep(2000);
-    robot.moveMouse(637, 175);
+    robot.moveMouseSmooth(637, 175);
     robot.mouseClick();
     sleep(4000)
-    robot.moveMouse(1355, 718)
+    robot.moveMouseSmooth(1355, 718)
     let count = 0
     while (count < 15 ) {
         robot.mouseClick();
         count++
     }
     sleep(2000);
-    robot.moveMouse(350, 300);
+    robot.moveMouseSmooth(350, 300);
     sleep(2000)
     robot.mouseClick();
     sleep(2000) //this line should get to the first picture
