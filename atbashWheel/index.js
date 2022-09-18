@@ -1,9 +1,9 @@
 function atbashWheel(text) {
-    return text.replace('a', 'H').replace('b', 'I').replace('c', 'J').replace('d', 'K').replace('e', 'L').replace('f', 'M').replace('g', 'N').replace('h', 'O').replace('i', 'P').replace('j', 'Q').replace('k', 'R').replace('l', 'S').replace('m', 'T').replace('n', 'U').replace('o', 'V').replace('p', 'W').replace('q', 'X').replace('r', 'Y').replace('s', 'Z').replace('t', 'A').replace('u', 'B').replace('v', 'C').replace('w', 'D').replace('x', 'E').replace('y', 'F').replace('z', 'G')
+    return text.replaceAll(' ', '_').replaceAll('a', 'H').replaceAll('b', 'I').replaceAll('c', 'J').replaceAll('d', 'K').replaceAll('e', 'L').replaceAll('f', 'M').replaceAll('g', 'N').replaceAll('h', 'O').replaceAll('i', 'P').replaceAll('j', 'Q').replaceAll('k', 'R').replaceAll('l', 'S').replaceAll('m', 'T').replaceAll('n', 'U').replaceAll('o', 'V').replaceAll('p', 'W').replaceAll('q', 'X').replaceAll('r', 'Y').replaceAll('s', 'Z').replaceAll('t', 'A').replaceAll('u', 'B').replaceAll('v', 'C').replaceAll('w', 'D').replaceAll('x', 'E').replaceAll('y', 'F').replaceAll('z', 'G')
 }
 //lowercase is the word uppercase is the codeword
 
 //to run file go to cd /c/wamp64/atbashWheel then node index.js
 
 
-console.log(atbashWheel('talk'))
+console.log(atbashWheel('hi hi'))
