@@ -3,4 +3,7 @@ function atbashWheel(text) {
 }
 //lowercase is the word uppercase is the codeword
 
+//to run file go to cd /c/wamp64/atbashWheel then node index.js
+
+
 console.log(atbashWheel('talk'))
