@@ -1,6 +1,6 @@
 //to run file go to cd /c/wamp64/atbashWheel then node index.js
 function atbashWheel(text) {
-    return text.replaceAll('a', 'H').replaceAll('b', 'I').replaceAll('c', 'J').replaceAll('d', 'K').replaceAll('e', 'L').replaceAll('f', 'M').replaceAll('g', 'N').replaceAll('h', 'O').replaceAll('i', 'P').replaceAll('j', 'Q').replaceAll('k', 'R').replaceAll('l', 'S').replaceAll('m', 'T').replaceAll('n', 'U').replaceAll('o', 'V').replaceAll('p', 'W').replaceAll('q', 'X').replaceAll('r', 'Y').replaceAll('s', 'Z').replaceAll('t', 'A').replaceAll('u', 'B').replaceAll('v', 'C').replaceAll('w', 'D').replaceAll('x', 'E').replaceAll('y', 'F').replaceAll('z', 'G')
+    return text.replaceAll(' ', '  ').replaceAll('a', 'H').replaceAll('b', 'I').replaceAll('c', 'J').replaceAll('d', 'K').replaceAll('e', 'L').replaceAll('f', 'M').replaceAll('g', 'N').replaceAll('h', 'O').replaceAll('i', 'P').replaceAll('j', 'Q').replaceAll('k', 'R').replaceAll('l', 'S').replaceAll('m', 'T').replaceAll('n', 'U').replaceAll('o', 'V').replaceAll('p', 'W').replaceAll('q', 'X').replaceAll('r', 'Y').replaceAll('s', 'Z').replaceAll('t', 'A').replaceAll('u', 'B').replaceAll('v', 'C').replaceAll('w', 'D').replaceAll('x', 'E').replaceAll('y', 'F').replaceAll('z', 'G')
 }
 //lowercase is the word uppercase is the codeword
 
@@ -14,9 +14,9 @@ function text(text) {
     return text.replaceAll(' ', '       ').replaceAll('a', '2  ').replaceAll('b', '2-2  ').replaceAll('c', '2-2-2  ').replaceAll('d', '3  ').replaceAll('e', '3-3  ').replaceAll('f', '3-3-3  ').replaceAll('g', '4  ').replaceAll('h', '4-4  ').replaceAll('i', '4-4-4  ').replaceAll('j', '5  ').replaceAll('k', '5-5  ').replaceAll('l', '5-5-5  ').replaceAll('m', '6  ').replaceAll('n', '6-6  ').replaceAll('o', '6-6-6  ').replaceAll('p', '7  ').replaceAll('q', '7-7  ').replaceAll('r', '7-7-7  ').replaceAll('s', '7-7-7-7  ').replaceAll('t', '8  ').replaceAll('u', '8-8  ').replaceAll('v', '8-8-8  ').replaceAll('w', '9  ').replaceAll('x', '9-9  ').replaceAll('y', '9-9-9  ').replaceAll('z', '9-9-9-9  ')
 } 
 
+//need to do a morse code one
 
 
-
-// console.log(atbashWheel('have bigfoot eating a hamburger'))
-// console.log(qwerty('bigfoot will be unharmed'))
-console.log(text('make him tell us a secret'))
+// console.log(atbashWheel('trailer park'))
+console.log(qwerty('behind the fridge'))
+// console.log(text('claws'))
