@@ -21,7 +21,7 @@ function morseCode(text) {
 //need to do a morse code one
 
 
-// console.log(atbashWheel('inside the garden'))
-// console.log(qwerty('behind the couch'))
-// console.log(text('under the kitchen table'))
-console.log(morseCode('hello how are you'))
+// console.log(atbashWheel('hold this puzzle between two fingers'))
+console.log(qwerty('put both hands on this puzzle'))
+// console.log(text('put your finger on this puzzle'))
+// console.log(morseCode(' hand'))
